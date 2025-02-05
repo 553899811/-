@@ -46,20 +46,50 @@
 - [Java SPI 机制 (PDai)](https://www.pdai.tech/md/java/advanced/java-advanced-spi.html)
 ## Java集合
 
-  - Map
-    - [HashMap原理](/docs/notes/Java基础/Java-容器/Map/HashMap.md)<br>
-    - [LinkedHashMap原理](https://www.jianshu.com/p/8f4f58b4b8ab)
-  - List  
-    - [ArrayList原理](/docs/notes/Java基础/Java-容器/Collection集合/基础知识/ArrayList.md)<br>
-    - [LinkedList原理](/docs/notes/Java基础/Java-容器/Collection集合/基础知识/LinkedList.md)<br>
-  - Stack
-    - [Stack原理](/docs/notes/Java基础/Java-容器/Collection集合/基础知识/Stack.md)
-  - Queue
-    - [PriorityQueue原理](https://blog.csdn.net/qq_35326718/article/details/72866180)
+### 有序集合 List
+* **ArrayList:** 基于动态数组实现，随机访问效率高，插入和删除效率低。
+    * 参考链接: [腾讯云文章](https://cloud.tencent.com/developer/article/1792774)
+    * 参考链接:[程序员大本营](https://www.pdai.tech/md/java/collection/java-collection-ArrayList.html)
+* **LinkedList:** 基于双向链表实现，插入和删除效率高，随机访问效率低。
+    * 参考链接: [程序员大本营](https://www.pdai.tech/md/java/collection/java-collection-LinkedList.html)
+* **Vector:** 与 ArrayList 类似，但它是线程安全的，效率较低。
+    * 参考链接: [CSDN博客](https://szh-forever-young.blog.csdn.net/article/details/120509495)
+* **Stack:** 继承自 Vector，实现了栈的数据结构，后进先出 (LIFO)。
+    * 参考链接: [CSDN博客](https://blog.csdn.net/m0_37869177/article/details/88847569)
+###  Queue (FIFO) 
+* **PriorityQueue:** 优先级队列，元素按照优先级顺序排序。
+    * 参考链接: [博客园](https://www.cnblogs.com/CarpenterLee/p/5488070.html)
+* **ArrayDeque:** 基于数组实现的双端队列，可以从两端添加和删除元素。
+    * 参考链接: [掘金博客](https://juejin.cn/post/6973280919918477320)
+### Set
+* **HashSet:** 基于 HashMap 实现，无序，不保证迭代顺序。
+    * 参考链接: [程序员大本营](https://www.pdai.tech/md/java/collection/java-map-HashMap&HashSet.html)
+* **LinkedHashSet:** 基于 LinkedHashMap 实现，有序，按照元素添加的顺序存储元素。
+    * 参考链接: [程序员大本营](https://www.pdai.tech/md/java/collection/java-map-LinkedHashMap&LinkedHashSet.html)
+* **TreeSet:** 基于 TreeMap 实现，有序，按照元素的自然顺序或自定义比较器排序。
+    * 参考链接: [程序员大本营](https://www.pdai.tech/md/java/collection/java-map-TreeMap&TreeSet.html)
+
+### Map
+* **HashMap:** 基于哈希表实现，无序，不保证迭代顺序。
+    * 参考链接: [程序员大本营](https://www.pdai.tech/md/java/collection/java-map-HashMap&HashSet.html)
+* **HashTable:** 与 HashMap 类似，但它是线程安全的，效率较低。
+    * 参考链接: [腾讯云文章](https://cloud.tencent.com/developer/article/1520582)
+* **LinkedHashMap:** 基于链表和哈希表实现，有序，按照元素添加的顺序存储元素。
+    * 参考链接: [程序员大本营](https://www.pdai.tech/md/java/collection/java-map-LinkedHashMap&LinkedHashSet.html)
+* **TreeMap:** 基于红黑树实现，有序，按照键的自然顺序或自定义比较器排序。
+    * 参考链接: [程序员大本营](https://www.pdai.tech/md/java/collection/java-map-TreeMap&TreeSet.html)
+* **WeakHashMap:** 键是弱引用，如果键没有其他引用，则会被垃圾回收。
+    * 参考链接: [程序员大本营](https://www.pdai.tech/md/java/collection/java-map-WeakHashMap.html)
+
+### Fail-Fast快速失败机制
+- [集合(Collection)中的并发修改判别机制](https://juejin.cn/post/6879291161274482695)
+
 
 ### 数据类型
  - String 
-   - [String原理](/docs/notes/Java基础/Java-数据类型/引用数据类型/String.md)
+   - [深入分析String原理](https://www.cnblogs.com/xiaoxi/p/6036701.html)
+ - BitSet
+    - [深入解读 Java BitSet](https://cloud.tencent.com/developer/article/2424259)
 ### 设计模式
  - [23种设计模式详细说明](http://c.biancheng.net/design_pattern/)
     - [单例模式](/docs/notes/设计模式/单例模式.md)
